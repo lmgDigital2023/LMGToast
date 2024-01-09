@@ -1,4 +1,4 @@
-Toast for iOS
+Anjani - Toast for iOS
 =============
 
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/Toast.svg)](http://cocoadocs.org/docsets/Toast)
