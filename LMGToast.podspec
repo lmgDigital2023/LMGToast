@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "Toast"
+  s.name         = "LMGToast"
   s.version      = "4.1.0"
   s.summary      = "A UIView category that adds Android-style toast notifications to iOS."
   s.homepage     = "https://github.com/scalessec/Toast"
