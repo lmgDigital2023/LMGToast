@@ -2,7 +2,7 @@
 //  UIView+Toast.m
 //  Toast
 //
-//  Copyright (c) 2011-2024 Charles Scalesse.
+//  Copyright (c) 2011-2017 Charles Scalesse.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a
 //  copy of this software and associated documentation files (the
@@ -94,7 +94,7 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
 - (void)showToast:(UIView *)toast duration:(NSTimeInterval)duration position:(id)position completion:(void(^)(BOOL didTap))completion {
     // sanity
     if (toast == nil) return;
-    
+    NSLog(@"position is %@", position);
     // store the completion block on the toast view
     objc_setAssociatedObject(toast, &CSToastCompletionKey, completion, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
@@ -151,6 +151,10 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
 - (void)cs_showToast:(UIView *)toast duration:(NSTimeInterval)duration position:(id)position {
     toast.center = [self cs_centerPointForPosition:position withToast:toast];
     toast.alpha = 0.0;
+    toast.layer.borderColor = [UIColor colorWithRed:0.99 green:0.474 blue:0.141 alpha:1].CGColor;
+    toast.layer.borderWidth = 1;
+    [toast setClipsToBounds:true];
+    toast.layer.cornerRadius = 5;
     
     if ([CSToastManager isTapToDismissEnabled]) {
         UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cs_handleToastTapped:)];
@@ -279,7 +283,7 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
     if (message != nil) {
         messageLabel = [[UILabel alloc] init];
         messageLabel.numberOfLines = style.messageNumberOfLines;
-        messageLabel.font = style.messageFont;
+        messageLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:12];
         messageLabel.textAlignment = style.messageAlignment;
         messageLabel.lineBreakMode = NSLineBreakByTruncatingTail;
         messageLabel.textColor = style.messageColor;
@@ -452,7 +456,7 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
     }
     
     // default to bottom
-    return CGPointMake(self.bounds.size.width / 2.0, (self.bounds.size.height - (toast.frame.size.height / 2.0)) - bottomPadding);
+    return CGPointMake(self.bounds.size.width / 2.0, 54);
 }
 
 @end
