@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "A UIView category that adds Android-style toast notifications to iOS."
   s.homepage     = "https://github.com/lmgDigital2023"
   s.license      = 'MIT'
-  s.author       = { "Charles Scalesse" => "contactanjani@gmail.com" }
+  s.author       = { "Anjani Kumar" => "contactanjani@gmail.com" }
   s.source       = { :git => "https://github.com/lmgDigital2023/LMGToast.git", :tag => s.version.to_s }
   s.platform     = :ios
   s.source_files = 'Toast', 'LMGToast-Framework/Toast.h'
