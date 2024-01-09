@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name         = "LMGToast1"
-  s.version      = "4.1.0"
+  s.name         = "LMGToast"
+  s.version      = "4.1.1"
   s.summary      = "A UIView category that adds Android-style toast notifications to iOS."
   s.homepage     = "https://github.com/lmgDigital2023"
   s.license      = 'MIT'
