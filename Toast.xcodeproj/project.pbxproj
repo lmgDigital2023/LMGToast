@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		1566460D1FC1ED8D00ECDFCE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1566460C1FC1ED8D00ECDFCE /* Images.xcassets */; };
 		15F305681FC1EFAF0058458A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15F305671FC1EFAF0058458A /* LaunchScreen.storyboard */; };
 		56E531712B4A3AF50034D6F5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 56E531702B4A3AF50034D6F5 /* PrivacyInfo.xcprivacy */; };
+		F7AE8C4C2B4D7769006EA8E8 /* Toast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152C43F01DCC1E0E00430487 /* Toast.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7AE8C4C2B4D7769006EA8E8 /* Toast.framework in Frameworks */,
 				151FC13413D36FCB007DC282 /* QuartzCore.framework in Frameworks */,
 				151FC0D713D34B7A007DC282 /* UIKit.framework in Frameworks */,
 				151FC0D913D34B7A007DC282 /* Foundation.framework in Frameworks */,
